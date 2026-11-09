@@ -1,0 +1,575 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<title>NAUAN</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* ======================================================*/
+  					/*THIẾT LẬP CHUNG*/  
+	.container {
+		max-width: 1600px;
+	}
+	
+	p {
+		color: #0d6efd;
+	}
+/* ====================================================== */
+/* ======================================================*/
+  					/*NAVBAR CHUNG*/  
+		.navbar1 {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		font-weight: bold;
+	}
+	
+	.navbar2 {
+		font-weight: bold;
+		padding-top: 15px;
+		padding-bottom: 5px;
+	}
+	
+	/* Hover navbar 2 */
+	.navbar2 .nav-link:hover {
+		color: #0d6efd !important;
+	}
+	
+	.navbar2 .dropdown-item:hover {
+		color: #0d6efd;
+	}
+	
+	/* Navbar 1 link */
+	.navbar1 .nav-link {
+		padding: 10px 10px;
+		border-radius: 20px;
+		transition: 0.2s;
+		font-size: 18px;
+		font-weight: bold;
+	}
+	
+	.navbar1 .nav-link:hover {
+		background-color: #fff;
+		color: #0d6efd !important;
+	}
+	
+	/* Container trong navbar */
+	.navbar1 .container-fluid,
+	.navbar2 .container-fluid {
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+/* ====================================================== */
+/* ================= ĐỔ BÓNG CHUNG  ================= */
+
+/* TẤT CẢ ẢNH */
+img {
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.25s ease;
+}
+
+
+.card {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* CARD SẢN PHẨM  */
+.book-card {
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+}
+
+
+.card:hover,
+img:hover {
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.22);
+}
+
+/* ======================================================*/
+  					/*SEARCH*/  
+	.search-wrapper {
+    width: 100%;
+    max-width: none;
+    position: relative;
+	}
+
+	.search-box {
+		height: 52px;
+		border-radius: 999px;
+		padding-left: 45px;
+		padding-right: 90px;
+		border: none;
+		font-size: 16px;
+	}
+	
+	/* Icon */
+	.search-icon-left {
+		position: absolute;
+		left: 18px;
+		top: 50%;
+		transform: translateY(-50%);
+		color: #666;
+	}
+	
+	.search-icon-right {
+		position: absolute;
+		right: 18px;
+		top: 50%;
+		transform: translateY(-50%);
+		color: #0d6efd;
+		font-size: 18px;
+	}
+/* ====================================================== */
+/* ======================================================*/
+  					/*CARD-SP*/  
+	.book-card {
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+	}
+	
+	.book-card img {
+		width: 100%;
+		height: auto;
+		display: block;
+	}
+	
+	.card-body {
+		flex-grow: 1;
+	}
+	
+	.book-price {
+		text-decoration: underline;
+	}
+	
+	.book-card .btn {
+		text-decoration: none;
+	}
+
+	
+/* ====================================================== */
+/* ======================================================*/
+  					/*FOOTER*/  
+	.footer {
+    background-color: #EFEFEA;
+	}
+
+	.footer a {
+		text-decoration: none;
+		font-size: 20px;
+	}
+	
+	/* Logo thanh toán */
+	.footer-logos {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+	
+	.footer-logos img {
+		height: 36px;
+		width: 64px;
+		background: #fff;
+		padding: 6px;
+		border-radius: 6px;
+		object-fit: contain;
+		display: block;
+	}
+/* ====================================================== */
+/* ======================================================*/
+  					/*RESPONSIVE*/  
+	/* Laptop nhỏ */
+	@media (max-width: 1200px) {
+		.search-wrapper {
+			max-width: 100%;
+		}
+	}
+	
+	/* Tablet */
+	@media (max-width: 992px) {
+		.search-wrapper {
+			max-width: 420px;
+		}
+	
+		.navbar1 .container-fluid,
+		.navbar2 .container-fluid {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	
+		.search-wrapper {
+			margin: 10px 0;
+		}
+	}
+	
+	/* Điện thoại */
+	@media (max-width: 576px) {
+		.search-wrapper {
+			max-width: 100%;
+		}
+	
+		.search-box {
+			height: 48px;
+			font-size: 14px;
+		}
+	
+		.navbar-nav {
+			text-align: center;
+		}
+	
+		.footer .col-md-2 {
+			margin-bottom: 20px;
+		}
+	}
+/* ====================================================== */
+</style>
+</head>
+
+<body>
+<body style="background-color:#EFEFEA"> <!--#EFEFEA-->
+    <div class="container-fluid  fixed-top">
+        <nav class="navbar navbar1 navbar-expand-lg bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-3 d-flex align-items-center" style="color:#FFF">
+                    <img src="../Hình ảnh/quamet.png" width="100px" style="border-radius:10px;">
+                    <div class="ms-2">
+                        <div style="font-size:35px; font-weight:bold; line-height:1;">LẨU</div>
+                        <div style="font-size:35px; font-weight:bold; line-height:1;">SÁCH</div>
+                    </div>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                   <!-- TÌM KIẾM -->
+                <form class="d-flex flex-grow-1 mx-4" role="search">
+                    <div class="search-wrapper">
+                        <i class="bi bi-search search-icon-left"></i>
+                
+                        <input type="search"
+                               class="form-control search-box"
+                               placeholder="Tìm kiếm">
+                
+                        <div class="search-icon-right">
+                            <b class="bi bi-mic-fill"></b>
+                            <b class="bi bi-camera-fill ms-2"></b>
+                        </div>
+                    </div>
+                </form>
+
+
+                    <!--TÌM KIẾM-->
+
+                    <!--Dồn bên phải -->
+                    <ul class="navbar-nav ms-auto me-4">
+                        <li class="nav-item me-4">
+                            <a class="nav-link" href="#" style="color:#FFF"><b class="bi bi-person-fill"></b> ĐĂNG NHẬP</a>
+                        </li>
+                        <li class="nav-item me-4">
+                            <a class="nav-link" href="#" style="color:#FFF"><b class="bi bi-cart-fill"></b> GIỎ HÀNG</a>
+                        </li>
+                    </ul>
+                    <!--Dồn bên phải -->
+
+                </div>
+            </div>
+        </nav>
+   
+
+    <!--NAVBAR 2-->
+    
+        <div>
+            <nav class="navbar navbar2 navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../TrangChuWeb.html" style="color:#000">TRANG CHỦ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../GIOITHIEU.html" style="color:#000">GIỚI THIỆU</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../LIENHE.html" style="color:#000">LIÊN HỆ</a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color:#000">
+                                    THỂ LOẠI
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="KINH TE.html">KINH TẾ</a></li>
+                                    <li><a class="dropdown-item" href="GIAODUC.html">GIÁO DỤC</a></li>
+                                    <li><a class="dropdown-item" href="LICHSU.html">LỊCH SỬ</a></li>
+                                    <li><a class="dropdown-item" href="Thể loại/NAUAN.html">NẤU ĂN</a></li>
+                                    <li><a class="dropdown-item" href="TIEUTHUYET.html">TIỂU THUYẾT</a></li>
+                                    <li><a class="dropdown-item" href="KINHDI.html">KINH DỊ</a></li>
+                                    <li><a class="dropdown-item" href="PHIEULUU.html">PHIÊU LƯU</a></li>
+                                    <li><a class="dropdown-item" href="TINHCAM.html">TÌNH CẢM</a></li>
+                                    <li><a class="dropdown-item" href="BIKICH.html">BI KỊCH</a></li>
+                                    <li><a class="dropdown-item" href="HAIKICH.html">HÀI KỊCH</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                        <!--Dồn bên phải -->
+                    <ul class="navbar-nav ms-auto me-4 ">
+                    	<li class="nav-item px-1 ">
+                            <a class="nav-link" href="#" style="color:#000"><b class="bi bi-envelope-at-fill"></b> Email </a>
+                        </li>
+                        <li class="nav-item px-1 border-start">
+                            <a class="nav-link" href="#" style="color:#000"><b class="bi bi-stopwatch-fill"></b> 7:00 - 22:00</a>
+                        </li>
+                        <li class="nav-item px-1 border-start">
+                            <a class="nav-link" href="#" style="color:#000"><b class="bi bi-telephone-fill"></b> 0949 223 498</a>
+                        </li>
+                    </ul><!--Dồn bên phải -->
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+<!--------------------------------------------------------------->
+	 <div class="container "  style="margin-top:250px">       
+     	<div class="row">
+        	 <div class="col-6">
+                    <img src="../Hình ảnh/saleGD.png" class="img-fluid rounded" style="height:100%; width:100%">
+             </div>
+             <div class="col-6">
+                    <img src="../Hình ảnh/2010.png" class="img-fluid rounded" style="height:100%; width:100%">
+             </div>
+        </div>
+     </div>  
+     
+<!--------------------------------------------------------------------------------------->
+<div class="container" style="margin-top:150px;">
+    <div class="d-flex align-items-center justify-content-center  mb-3">  
+      <div style="width: 5%; border-top: 3px solid #000;"></div>
+      <h2 class="px-3 fw-bold" style="margin: 0;">NẤU ĂN</h2>
+      <div style="width: 5%; border-top: 3px solid #000;"></div>
+    </div>
+</div>
+<!--------------------------------------------------------------------------------------->
+<div class="container">
+    <!-- Hàng 1 -->
+    <div class="row">
+         <div class="col-12 col-sm-6 col-md-3 d-flex">
+            <a href="#" class="card book-card">
+                <img src="../Hình ảnh/When Genius Failed (Khi thiên tài thất bại).png"  alt="">        
+                <div class="card-body text-center">
+                    <h6 class="book-title">When Genius Failed </h6>
+                    <p class="book-price">168.000₫</p>
+                   <div class="d-flex justify-content-center gap-2">
+                        <button class="btn btn-outline-primary btn-sm btn-action">Xem chi tiết</button>
+                        <button class="btn btn-primary btn-sm btn-action"> <i class="bi bi-cart-fill"></i></button>
+                   </div>                                                   
+                </div>
+            </a>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3 d-flex">
+            <a href="#" class="card book-card">
+                <img src="../Hình ảnh/The Power of Habit (Sức mạnh của thói quen).png"  alt="">        
+                <div class="card-body text-center">
+                    <h6 class="book-title">The Power of Habit</h6>
+                    <p class="book-price">155.000₫</p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <button class="btn btn-outline-primary btn-sm btn-action">Xem chi tiết</button>
+                        <button class="btn btn-primary btn-sm btn-action"> <i class="bi bi-cart-fill"></i></button>
+                   </div>  
+                </div>   
+            </a>
+        </div>
+        
+        <div class="col-12 col-sm-6 col-md-3 d-flex">
+            <a href="#" class="card book-card">
+                <img src="../Hình ảnh/Drive (Daniel H. Pink).png"   alt="">        
+                <div class="card-body text-center">
+                    <h6 class="book-title">Drive</h6>
+                    <p class="book-price">120.000₫</p>
+                   <div class="d-flex justify-content-center gap-2">
+                        <button class="btn btn-outline-primary btn-sm btn-action">Xem chi tiết</button>
+                        <button class="btn btn-primary btn-sm btn-action"> <i class="bi bi-cart-fill"></i></button>
+                   </div>  
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-12 col-sm-6 col-md-3 d-flex">
+            <a href="#" class="card book-card">
+                <img src="../Hình ảnh/Excellent Sheep.png"  alt="">        
+                <div class="card-body text-center">
+                    <h6 class="book-title">Excellent Sheep</h6>
+                    <p class="book-price">177.000₫</p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <button class="btn btn-outline-primary btn-sm btn-action">Xem chi tiết</button>
+                        <button class="btn btn-primary btn-sm btn-action"> <i class="bi bi-cart-fill"></i></button>
+                   </div>  
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hàng 2 -->
+    <div class="row" style="margin-top:20px;">
+        <div class="col-12 col-sm-6 col-md-3 d-flex">
+            <a href="#" class="card book-card">
+                <img src="../Hình ảnh/Thiết kế chưa có tên (20).png"  alt="">        
+                <div class="card-body text-center">
+                    <h6 class="book-title">Onư up on the wall street</h6>
+                    <p class="book-price">120.000₫</p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <button class="btn btn-outline-primary btn-sm btn-action">Xem chi tiết</button>
+                        <button class="btn btn-primary btn-sm btn-action"> <i class="bi bi-cart-fill"></i></button>
+                   </div>  
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-12 col-sm-6 col-md-3 d-flex">
+            <a href="#" class="card book-card">
+                <img src="../Hình ảnh/Thiên Nga Đen (The Black Swan).png"  alt="">
+                <div class="card-body text-center">
+                    <h6 class="book-title">Thiên Nga Đen</h6>
+                    <p class="book-price">177.000₫</p>
+                   <div class="d-flex justify-content-center gap-2">
+                        <button class="btn btn-outline-primary btn-sm btn-action">Xem chi tiết</button>
+                        <button class="btn btn-primary btn-sm btn-action"> <i class="bi bi-cart-fill"></i></button>
+                   </div>  
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-12 col-sm-6 col-md-3 d-flex">
+            <a href="#" class="card book-card">
+                <img src="../Hình ảnh/Thirteen Senses (Mười ba giác quan).png"  alt="">        
+                <div class="card-body text-center">
+                    <h6 class="book-title">Thirteen Senses</h6>
+                    <p class="book-price">160.000₫</p>
+                    <div class="d-flex justify-content-center gap-2">
+                        <button class="btn btn-outline-primary btn-sm btn-action">Xem chi tiết</button>
+                        <button class="btn btn-primary btn-sm btn-action"> <i class="bi bi-cart-fill"></i></button>
+                   </div>  
+                </div>
+            </a>
+        </div>
+        
+        <div class="col-12 col-sm-6 col-md-3 d-flex">
+            <a href="#" class="card book-card">
+                <img src="../Hình ảnh/the food lab.png"  alt="">        
+                <div class="card-body text-center">
+                    <h6 class="book-title">The food lab</h6>
+                    <p class="book-price">156.000₫</p>
+                   <div class="d-flex justify-content-center gap-2">
+                        <button class="btn btn-outline-primary btn-sm btn-action">Xem chi tiết</button>
+                        <button class="btn btn-primary btn-sm btn-action"> <i class="bi bi-cart-fill"></i></button>
+                   </div>  
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="text-center mt-4 mb-5">
+    <button class="btn btn-outline-primary px-4 py-2"><b>XEM THÊM</b></button>
+	</div>
+</div>
+<!--------------------------------------------------------------------------------------->      
+
+<!----------------------------FOOTER--------------------------------------------------------->
+<div class="container-fluid">
+ <!-- FOOTER TOP BAR -->
+    <div class="footer-top-bar bg-primary py-4">
+        <div class="container  ">
+                    
+        </div>
+    </div>
+	<!-- FOOTER TOP BAR -->
+    <footer class="footer  ">
+        <div class="container py-5">
+    
+            <div class="row">
+                <!-- CỘT 1: GIỚI THIỆU -->
+                <div class="col-md-2">
+                    <h4 class="footer-title">VỀ CHÚNG TÔI</h4>
+                    <p><a href="#">Hệ thống cửa hàng</a></p>
+                    <p><a href="#">Chính sách giao hàng</a></p>
+                    <p><a href="#">Chính sách đổi trả hàng</a></p>
+                    <p><a href="#">Liên hệ hợp tác</a></p>                   
+                </div>
+    
+                <!-- CỘT 2: MENU NHANH -->
+                <div class="col-md-2">
+                    <h4 class="footer-title">DANH MỤC</h4>
+                    <p><a href="#">Trang chủ</a></p>
+                    <p><a href="#">Giới thiệu</a></p>
+                    <p><a href="#">Tin tức</a></p>
+                    <p><a href="#">Liên hệ</a></p>
+                </div>
+    
+                <!-- CỘT 3: LIÊN HỆ -->
+                <div class="col-md-2">
+                    <h4 class="footer-title">LIÊN HỆ</h4><p><b class="bi bi-geo-alt-fill"></b> 329, khu phố 6, phường Rạch Gía, tỉnh An Giang</p>
+                    <p><b class="bi bi-telephone-fill"></b> 0949 223 498</p>
+                    <p><b class="bi bi-envelope-fill"></b> LauSach@gmail.com</p>
+                </div>
+                
+                 <div class="col-md-2">
+                    <h4 class="footer-title">CSKH (7:00 - 22:00)</h4>
+                    <p><a href="#"> (1) 1900 2234</a></p>
+                    <p><a href="#"> (2) 1900 3327</a></p>                    
+                </div>
+    
+                <!-- CỘT 4: MẠNG XÃ HỘI -->
+                <div class="col-md-2">
+                    <h4 class="footer-title">MẠNG XÃ HỘI</h4>
+                    <div class="footer-social">
+                        <a href="#"><i class="bi bi-facebook fs-1"></i></a>
+                        <a href="#"><i class="bi bi-messenger fs-1"></i></a>
+                        <a href="#"><i class="bi bi-instagram fs-1"></i></a>
+                    </div>
+                    <h4 class="footer-title" style="margin-top:7%;">THANH TOÁN QUA</h4>
+                        <div class="footer-logos">
+                            <img src="../Hình ảnh/visa.png">
+                            <img src="../Hình ảnh/momo.png">
+                            <img src="../Hình ảnh/paypal.png">
+                            <img src="../Hình ảnh/vnpay.png">
+                            <img src="../Hình ảnh/zalopay.png">
+                            <img src="../Hình ảnh/applepay.png">                            
+                        </div>
+                </div>
+                
+                <div class="col-md-2">
+                	<h4 class="footer-title">NHẬN THÔNG BÁO</h4>
+                        <form>
+                            <div class="input-group">
+                                <input type="email"
+                                       class="form-control"
+                                       placeholder="Nhập Gmail"
+                                       required>
+                    
+                                <button class="btn btn-primary" type="submit">Gửi </button>                                   
+                            </div>
+                        </form>
+                </div>
+            </div>    
+        </div>
+    
+        <!-- DÒNG BẢN QUYỀN -->
+        <div class="footer-bottom text-center py-3">
+           <b> © 2025 LẨU SÁCH. Website bán sách uy tín hàng đầu thị trường<br />
+            Chịu trách nhiệm nội dung: Lý Văn Tính.</b>
+        </div>
+    </footer>
+</div>            
+<!----------------------------FOOTER--------------------------------------------------------->
+</body>
+</html>
